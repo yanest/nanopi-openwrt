@@ -1,4 +1,4 @@
-name: r2s 定制版openwrt 
+name: r2s 定制版openwrt
 
 on:
   push:
