@@ -1,4 +1,4 @@
-name: r2s Lean版openwrt minimal
+name: r2s Lean版openwrt minimal 
 
 on:
   push:
@@ -47,7 +47,7 @@ jobs:
 
       - name: Patch Kernel
         run: |
-          . patch_kernel_5.4.sh
+          . patch_kernel_5.4_cpu1200mhz.sh
 
       - name: Mods
         run: |
