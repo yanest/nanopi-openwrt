@@ -1,17 +1,18 @@
-name: r2s 定制版openwrt
+name: r2s 定制版 minimal 
 
 on:
   push:
     branches:
       - master
     paths:
-      - '.github/workflows/r2s_mod_by_yanest.yml'
+      - '.github/workflows/r2s_mod_yanest.yml'
+
 
 jobs:
 
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     if: github.repository == 'yanest/nanopi-openwrt'
 
     steps:
@@ -84,16 +85,16 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
           CONFIG_PACKAGE_luci-app-ssrserver-python=y
           CONFIG_PACKAGE_luci-app-uhttpd=y
-          CONFIG_PACKAGE_luci-app-unblockmusic=y
+          #CONFIG_PACKAGE_luci-app-unblockmusic=y
           CONFIG_PACKAGE_luci-app-v2ray-server=y
           CONFIG_PACKAGE_luci-app-vssr=y
           CONFIG_PACKAGE_luci-theme-argon=y
-          CONFIG_PACKAGE_luci-theme-material=y
-          CONFIG_PACKAGE_luci-theme-netgear=y
+          #CONFIG_PACKAGE_luci-theme-material=y
+          #CONFIG_PACKAGE_luci-theme-netgear=y
           CONFIG_PACKAGE_luci-app-unblockmusic=y
           CONFIG_PACKAGE_kmod-rtl8xxxu=y
-          CONFIG_UnblockNeteaseMusic_Go=y
-          CONFIG_UnblockNeteaseMusic_NodeJS=y
+          #CONFIG_UnblockNeteaseMusic_Go=y
+          #CONFIG_UnblockNeteaseMusic_NodeJS=y
           CONFIG_PACKAGE_luci-app-passwall=y
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
           CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks=y
@@ -201,7 +202,7 @@ jobs:
           cp friendlywrt-rk3328/friendlywrt/.config ./artifact/
           zip -r artifact.zip ./artifact/
           #release_tag="R2S-Lean-$(date +%Y-%m-%d)-Minimal"
-          release_tag="R2S-Minimal-$(date +%Y-%m-%d)"
+          release_tag="R2S-yanest-$(date +%Y-%m-%d)"
           echo "##[set-output name=release_tag;]$release_tag"
       - name: Create Release
         id: create_release
@@ -210,7 +211,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.sec_token }}
         with:
           tag_name: ${{ steps.assemble_artifact.outputs.release_tag }}
-          release_name: 自动发布_自己定制 ${{ steps.assemble_artifact.outputs.release_tag }}
+          release_name: 自动发布 ${{ steps.assemble_artifact.outputs.release_tag }}
           draft: false
           prerelease: false
       - name: Upload Release Asset
