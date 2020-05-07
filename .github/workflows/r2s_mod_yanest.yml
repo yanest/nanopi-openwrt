@@ -103,12 +103,29 @@ jobs:
           #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=y
           #CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_luci-app-zerotier=y
+          # Add Package
           CONFIG_PACKAGE_luci-app-wireguard=y
           CONFIG_PACKAGE_luci-app-ttyd=y
-          CONFIG_PACKAGE_luci-app-docker=y
-          CONFIG_PACKAGE_luci-app-dockerman=y
-          CONFIG_PACKAGE_luci-app-samba=y
+          #CONFIG_PACKAGE_luci-app-docker=y
+          #CONFIG_PACKAGE_luci-app-dockerman=y
+          #CONFIG_PACKAGE_luci-app-samba=y
           CONFIG_PACKAGE_lrzsz=y
+          CONFIG_PACKAGE_tmux=y
+          CONFIG_PACKAGE_tcpdump=y
+          CONFIG_PACKAGE_luci-app-n2n_v2=y
+          CONFIG_PACKAGE_antfs-mount=y
+          CONFIG_PACKAGE_mt7601u-firmware=y
+          CONFIG_PACKAGE_luci-app-cifsd=y
+          CONFIG_PACKAGE_kmod-usb-storage=y
+          CONFIG_PACKAGE_kmod-usb-storage-extras=y
+          CONFIG_PACKAGE_iperf3=y
+          CONFIG_PACKAGE_mac-telnet-client=y
+          CONFIG_PACKAGE_mac-telnet-discover=y
+          CONFIG_PACKAGE_mac-telnet-ping=y
+          # CONFIG_PACKAGE_mac-telnet-server=y
+          CONFIG_PACKAGE_tinc=y
+          CONFIG_PACKAGE_luci-app-haproxy-tcp=y
+          ##################################################
           # CONFIG_PACKAGE_luci-app-accesscontrol is not set
           # CONFIG_PACKAGE_luci-app-nlbwmon is not set
           # CONFIG_PACKAGE_nlbwmon is not set
