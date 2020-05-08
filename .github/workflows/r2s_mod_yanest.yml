@@ -114,7 +114,6 @@ jobs:
           CONFIG_PACKAGE_tcpdump=y
           CONFIG_PACKAGE_luci-app-n2n_v2=y
           CONFIG_PACKAGE_antfs-mount=y
-          CONFIG_PACKAGE_mt7601u-firmware=y
           CONFIG_PACKAGE_luci-app-cifsd=y
           CONFIG_PACKAGE_kmod-usb-storage=y
           CONFIG_PACKAGE_kmod-usb-storage-extras=y
@@ -124,7 +123,9 @@ jobs:
           CONFIG_PACKAGE_mac-telnet-ping=y
           # CONFIG_PACKAGE_mac-telnet-server=y
           CONFIG_PACKAGE_tinc=y
-          CONFIG_PACKAGE_luci-app-haproxy-tcp=y
+          CONFIG_PACKAGE_fdisk=y
+          CONFIG_PACKAGE_lsblk=y
+          CONFIG_PACKAGE_iftop=y
           ##################################################
           # CONFIG_PACKAGE_luci-app-accesscontrol is not set
           # CONFIG_PACKAGE_luci-app-nlbwmon is not set
